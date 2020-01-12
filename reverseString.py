@@ -10,7 +10,12 @@ def get_reversed_iterative(item):
 
 def get_reversed_recursive(item):
 
-    
+    if(len(item) == 0):
+        return ""
+
+    print(item[(len(item)-1)], end="")
+
+    return get_reversed_recursive(item[:len(item)-1])
 
 
-print(get_reversed_iterative('yoyo mastery'))
+get_reversed_recursive('yoyo mastery')
